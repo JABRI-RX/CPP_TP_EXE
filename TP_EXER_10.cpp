@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <vector>
 using namespace std;
-bool check_desc(int& i,int& j)
+bool check_desc(int& i, int& j)
 {
 	if (i > j)
 	{
@@ -13,8 +13,8 @@ bool check_desc(int& i,int& j)
 		return false;
 	}
 }
- 
- 
+
+
 int main()
 {
 	//1
@@ -36,9 +36,9 @@ int main()
 	{
 		cout << *it << ",";
 	}
-	
+
 	//4
-	if (is_sorted(dqs.begin(), dqs.end(),check_desc))
+	if (is_sorted(dqs.begin(), dqs.end(), check_desc))
 	{
 		cout << "deque trier dans un order decoissant";
 	}
@@ -54,8 +54,8 @@ int main()
 		cout << *it << ",";
 	}
 	//6
-	
-	std::vector<int> vecs(dqs.size());
+
+	vector<int> vecs(dqs.size());
 	copy(dqs.begin(), dqs.end(), vecs.begin());
 	//7
 	remove(dqs.begin(), dqs.end(), 0);
@@ -77,10 +77,10 @@ int main()
 	else {
 		cout << "Valeur n'exist pas\n";
 	}
-	
-	pair<deque<int>::iterator,deque<int>::iterator> res = minmax_element(dqs.begin(), dqs.end());
-	
-	cout << "Valuer min est " << *res.first<<'\n';
+
+	pair<deque<int>::iterator, deque<int>::iterator> res = minmax_element(dqs.begin(), dqs.end());
+
+	cout << "Valuer min est " << *res.first << '\n';
 	cout << "Valuer max est " << *res.second << '\n';
 	system("pause");
 }
