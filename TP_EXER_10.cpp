@@ -38,14 +38,11 @@ int main()
 	}
 
 	//4
-	if (is_sorted(dqs.begin(), dqs.end(), check_desc))
+	if (!is_sorted(dqs.begin(), dqs.end(), check_desc))
 	{
-		cout << "deque trier dans un order decoissant";
-	}
-	else {
 		sort(dqs.begin(), dqs.end());
-
 	}
+
 	//5
 	cout << "\n-----------------<<-----------------\n";
 
