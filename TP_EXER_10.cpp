@@ -55,13 +55,7 @@ int main()
 	vector<int> vecs(dqs.size());
 	copy(dqs.begin(), dqs.end(), vecs.begin());
 	//7
-	remove(dqs.begin(), dqs.end(), 0);
-	cout << "\n-----------------<<-----------------\n";
-
-	for (auto it = dqs.rbegin(); it != dqs.rend(); it++)
-	{
-		cout << *it << ",";
-	}
+	dqs.erase(remove(dqs.begin(), dqs.end(), 0),dqs.end());
 	//8
 	int i;
 	cout << "enter la valeur pour rechercher :";
